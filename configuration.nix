@@ -88,6 +88,7 @@
     # idk bro
     fuzzel
     swaybg
+    xwayland-satellite
     quickshell
     starship
     zoxide
