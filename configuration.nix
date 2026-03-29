@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -19,10 +18,10 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
-	alsa.enable = true;
-	alsa.support32Bit = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
-	wireplumber.enable =  true;
+    wireplumber.enable = true;
   };
 
   nix.settings = {
@@ -35,20 +34,27 @@
   hardware.graphics.enable = true;
   programs.dconf.enable = true;
   programs.direnv = {
-	enable = true;
-	nix-direnv.enable = true;
+    enable = true;
+    nix-direnv.enable = true;
   };
 
-  programs.dconf.profiles.user.databases = [{
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  }];
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    }
+  ];
 
   security.polkit.enable = true;
 
   users.users.vokin = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "audio"
+      "video"
+      "networkmanager"
+    ];
     password = "kiruma";
     packages = with pkgs; [
       tree
@@ -60,16 +66,25 @@
   ];
 
   environment.systemPackages = with pkgs; [
-	# dev stuff
-    neovim
-	fzf
-	nixd
-    alacritty
-    zig
-    git
+    # apps
     librewolf
     vesktop
+
+    # tuis
+    neovim
+    alacritty
+    fzf
+
+    # dev tools
+    git
     stow
+
+    # languages
+    zig
+    nixd
+    nixfmt
+
+    # idk bro
     fuzzel
     swaybg
     starship
@@ -82,7 +97,7 @@
   ];
 
   environment.sessionVariables = {
-	GTK_THEME = "Adwaita-dark";
+    GTK_THEME = "Adwaita-dark";
     QT_STYLE_OVERRIDE = "adwaita-dark";
     QT_QPA_PLATFORM = "wayland";
     GDK_BACKEND = "wayland,x11";
