@@ -87,6 +87,7 @@
     # idk bro
     fuzzel
     swaybg
+    quickshell
     starship
     zoxide
     tmux
