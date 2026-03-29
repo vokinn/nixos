@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 {
   imports =
     [
@@ -94,6 +94,7 @@
     gtk-application-prefer-dark-theme=1
     gtk-theme-name=Adwaita-dark
   '';
+
   programs.zsh.enable = true;
   system.stateVersion = "25.11";
 }
