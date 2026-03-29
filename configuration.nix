@@ -77,6 +77,7 @@
 
     # dev tools
     git
+    cargo
     stow
 
     # languages
