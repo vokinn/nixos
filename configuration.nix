@@ -89,8 +89,8 @@
     # idk bro
     fuzzel
     swaybg
-    socat
     xwayland-satellite
+    bibata-cursors
     quickshell
     starship
     zoxide
@@ -110,9 +110,11 @@
   };
 
   environment.etc."gtk-3.0/settings.ini".text = ''
-    [Settings]
-    gtk-application-prefer-dark-theme=1
-    gtk-theme-name=Adwaita-dark
+        [Settings]
+        gtk-application-prefer-dark-theme=1
+        gtk-theme-name=Adwaita-dark
+    	gtk-cursor-theme-name=Bibata-Modern-Classic
+    	gtk-cursor-theme-size=24
   '';
 
   programs.zsh.enable = true;
