@@ -3,7 +3,6 @@
   imports = [
     ./hardware-configuration.nix
   ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -108,14 +107,6 @@
     GDK_BACKEND = "wayland,x11";
     NIXOS_OZONE_WL = "1";
   };
-
-  environment.etc."gtk-3.0/settings.ini".text = ''
-        [Settings]
-        gtk-application-prefer-dark-theme=1
-        gtk-theme-name=Adwaita-dark
-    	gtk-cursor-theme-name=Bibata-Modern-Classic
-    	gtk-cursor-theme-size=24
-  '';
 
   programs.zsh.enable = true;
   system.stateVersion = "25.11";
