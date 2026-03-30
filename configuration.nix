@@ -89,6 +89,7 @@
     # idk bro
     fuzzel
     swaybg
+    socat
     xwayland-satellite
     quickshell
     starship
