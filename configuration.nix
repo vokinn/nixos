@@ -79,6 +79,7 @@
     git
     cargo
     stow
+    nodejs_24
 
     # languages
     zig
