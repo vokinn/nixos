@@ -71,36 +71,48 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # apps
+    # communication
     librewolf
     vesktop
 
-    # tuis
-    neovim
-    alacritty
-    fzf
-
     # dev tools
+    neovim
+    lazygit
+    codeberg-cli
     git
-    cargo
-    stow
-    nodejs_24
+    gh
 
-    # languages
-    zig
+    # languages and toolchains
+    cargo
+    nodejs_24
+    zig # i have this here just for the C compiler
     nixd
     nixfmt
 
-    # idk bro
-    fuzzel
-    swaybg
-    xwayland-satellite
-    bibata-cursors
-    quickshell
-    starship
-    zoxide
+    # terminal and shell
+    alacritty
     tmux
     zsh
+    starship
+    zoxide
+    fzf
+
+    # wayland / compositor
+    quickshell
+    swaybg
+    xwayland-satellite
+    fuzzel
+
+    # utilities
+    ripgrep
+    btop
+    wl-clipboard
+    unzip
+    opencode
+    stow
+
+    # theming
+    bibata-cursors
     adwaita-qt
     adwaita-qt6
     gnome-themes-extra
