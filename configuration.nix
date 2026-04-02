@@ -111,6 +111,7 @@
     wl-clipboard
     bubblewrap
     unzip
+    zathura
     opencode
     stow
 
