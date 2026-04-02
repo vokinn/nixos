@@ -94,6 +94,7 @@
     alacritty
     tmux
     zsh
+    yazi
     starship
     zoxide
     fzf
