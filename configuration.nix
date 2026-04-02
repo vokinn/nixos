@@ -107,6 +107,7 @@
     ripgrep
     btop
     wl-clipboard
+    bubblewrap
     unzip
     opencode
     stow
