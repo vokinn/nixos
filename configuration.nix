@@ -109,6 +109,7 @@
     ripgrep
     btop
     wl-clipboard
+    ghidra
     bubblewrap
     unzip
     opencode
