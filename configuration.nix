@@ -119,6 +119,17 @@
     adwaita-qt
     adwaita-qt6
     gnome-themes-extra
+
+    # p*thon
+    python3
+    python3Packages.pip
+    python3Packages.ipython
+    python3Packages.z3-solver
+    python3Packages.capstone
+    python3Packages.keystone-engine
+
+    pyright
+    ruff
   ];
 
   environment.sessionVariables = {
