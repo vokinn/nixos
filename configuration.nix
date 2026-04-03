@@ -128,7 +128,7 @@
     python3Packages.capstone
     python3Packages.keystone-engine
 
-    basedpyright
+    pyright
     ruff
   ];
 
