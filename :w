@@ -11,7 +11,7 @@
     {
       self,
       nixpkgs,
-      nixpkgs-old,
+      inputs,
       codex,
       ...
     }:
@@ -19,10 +19,7 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {
-          nixpkgsOld = nixpkgs-old;
-        };
-
+        specialArgs = { inherit inputs; };
         modules = [
           (
             { pkgs, ... }:

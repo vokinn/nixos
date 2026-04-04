@@ -1,4 +1,15 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  nixpkgsOld,
+  ...
+}:
+let
+  oldPkgs = import nixpkgsOld {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true; # ahh ahh
+  };
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -77,7 +88,7 @@
     vesktop
 
     # dev tools
-    neovim
+    oldPkgs.neovim
     lazygit
     codeberg-cli
     git
