@@ -108,6 +108,7 @@
     # utilities
     ripgrep
     btop
+    mullvad-vpn
     wl-clipboard
     ghidra
     bubblewrap
