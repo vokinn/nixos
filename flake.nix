@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-old.url = "github:NixOS/nixpkgs/e6f23dc08d3624daab7094b701aa3954923c6bbb"; # for neovim
+
+    # i got the hash from https://lazamar.co.uk/nix-versions/
+    # this has neovim 0.11.2 but its fine
+    nixpkgs-old.url = "github:NixOS/nixpkgs/e6f23dc08d3624daab7094b701aa3954923c6bbb";
     codex.url = "github:sadjow/codex-cli-nix";
   };
 
