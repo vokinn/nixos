@@ -97,7 +97,13 @@ in
     # languages and toolchains
     cargo
     nodejs_24
-    zig # i have this here just for the C compiler
+    gcc
+    clang-tools
+    gnumake
+    llvm
+    cmake
+    ninja
+
     nixd
     nixfmt
 
@@ -153,6 +159,7 @@ in
     NIXOS_OZONE_WL = "1";
   };
 
+  services.mullvad-vpn.enable = true;
   programs.zsh.enable = true;
   system.stateVersion = "25.11";
 }
