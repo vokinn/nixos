@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     librewolf
     vesktop
+    sioyek
 
     # dev tools
     neovim
