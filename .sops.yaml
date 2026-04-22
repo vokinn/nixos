@@ -1,0 +1,7 @@
+keys:
+  - &vokin age1zmhmt3rgryek9k7dn6fzl8ppmvchv3500t3ah9dw8qwvk2s54azqzf0jhc
+creation_rules:
+  - path_regex: secrets/.*
+    key_groups:
+      - age:
+          - *vokin
