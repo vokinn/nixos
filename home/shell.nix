@@ -40,7 +40,7 @@
       add_newline = false;
       format = "$directory$git_branch$git_commit$git_state $git_status$character\n";
       continuation_prompt = "▶▶ ";
-      right_format = "$nodejs$python$rust$golang$c$lua$zig$nix_shell$time$ocaml"; # trim to what you actually use
+      right_format = "$nodejs$python$rust$golang$c$lua$zig$nix_shell$time$ocaml";
 
       directory = {
         disabled = false;
@@ -97,7 +97,6 @@
       };
 
       aws.disabled = true;
-      # ... rest of your language modules
     };
   };
 
