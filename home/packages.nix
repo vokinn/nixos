@@ -15,6 +15,7 @@
     # languages and toolchains
     cargo
     nodejs_24
+    tree-sitter
     gcc
     clang-tools
     gnumake
