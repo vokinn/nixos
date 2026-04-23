@@ -9,6 +9,7 @@
     neovim
     lazygit
     codeberg-cli
+    qemu
     git
     gh
     codex.packages.${pkgs.stdenv.hostPlatform.system}.default
