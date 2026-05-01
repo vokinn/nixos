@@ -1,4 +1,9 @@
-{ pkgs, codex, ... }:
+{
+  pkgs,
+  codex,
+  gemini-cli-nix,
+  ...
+}:
 {
   home.packages = with pkgs; [
     librewolf
@@ -13,6 +18,7 @@
     git
     gh
     codex.packages.${pkgs.stdenv.hostPlatform.system}.default
+    gemini-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # languages and toolchains
     cargo

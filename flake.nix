@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     codex.url = "github:sadjow/codex-cli-nix";
     sops-nix.url = "github:Mic92/sops-nix";
+    gemini-cli-nix = {
+      url = "github:Daaboulex/gemini-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,6 +21,7 @@
       nixpkgs,
       codex,
       sops-nix,
+      gemini-cli-nix,
       home-manager,
       ...
     }:
@@ -40,7 +45,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit codex; };
+            home-manager.extraSpecialArgs = { inherit codex gemini-cli-nix; };
             home-manager.users.vokin = import ./home;
           }
         ];
