@@ -22,6 +22,7 @@
 
     # languages and toolchains
     cargo
+    rustc
     nodejs_24
     tree-sitter
     gcc
