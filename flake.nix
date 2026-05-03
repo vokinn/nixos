@@ -13,6 +13,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -23,6 +27,7 @@
       sops-nix,
       gemini-cli-nix,
       home-manager,
+      noctalia,
       ...
     }:
 
@@ -45,7 +50,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit codex gemini-cli-nix; };
+            home-manager.extraSpecialArgs = { inherit codex gemini-cli-nix noctalia; };
             home-manager.users.vokin = import ./home;
           }
         ];

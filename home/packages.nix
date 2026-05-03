@@ -16,7 +16,6 @@
     codeberg-cli
     qemu
     git
-    flatpak
     gh
     codex.packages.${pkgs.stdenv.hostPlatform.system}.default
     gemini-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default

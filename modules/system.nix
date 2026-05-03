@@ -1,9 +1,16 @@
 { pkgs, ... }:
 {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
   environment.sessionVariables = {
@@ -16,6 +23,11 @@
 
   programs.zsh.enable = true;
   programs.dconf.enable = true;
+  services.flatpak.enable = true;
+
+  hardware.bluetooth.enable = true;
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   users.users.vokin = {
     isNormalUser = true;
