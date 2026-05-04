@@ -35,7 +35,7 @@
     nixfmt
 
     # terminal
-    alacritty
+    ghostty
     tmux
     yazi
 
