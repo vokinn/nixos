@@ -1,7 +1,6 @@
 {
   pkgs,
   codex,
-  gemini-cli-nix,
   ...
 }:
 {
@@ -18,7 +17,6 @@
     jujutsu
     gh
     codex.packages.${pkgs.stdenv.hostPlatform.system}.default
-    gemini-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # languages and toolchains
     cargo
@@ -36,7 +34,6 @@
 
     # terminal
     ghostty
-    alacritty
     tmux
     yazi
 
