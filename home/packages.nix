@@ -36,6 +36,7 @@
 
     # terminal
     ghostty
+    alacritty
     tmux
     yazi
 
