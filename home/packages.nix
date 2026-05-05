@@ -15,7 +15,7 @@
     codeberg-cli
     qemu
     git
-    jj
+    jujutsu
     gh
     codex.packages.${pkgs.stdenv.hostPlatform.system}.default
     gemini-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
