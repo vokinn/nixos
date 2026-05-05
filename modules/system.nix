@@ -23,7 +23,6 @@
 
   programs.zsh.enable = true;
   programs.dconf.enable = true;
-  services.flatpak.enable = true;
 
   hardware.bluetooth.enable = true;
   services.upower.enable = true;
